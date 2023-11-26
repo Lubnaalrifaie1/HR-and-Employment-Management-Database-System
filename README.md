@@ -10,66 +10,60 @@ This project revolves around designing and implementing an employee management s
 - The payment cycle date is fixed and common for all employees in the organization. This assumption is valid as it reflects general accounting principles.
 - Each employee will have a fixed wage.
 ## User Experience / User Interface:
-To utilize the system's functionalities, users will have to initially register an organization
-in the web application and create departments. Following the latter, the superuser (the user
-who created the organization) can invite other users (i.e., employees) to join newly
-created departments. Certain departments, as well as users with the appropriate access level,
-can create projects, set payroll details, and enter performance appraisal results into the system
-via forms in the web application. Additionally, the employees can also download their pay
-stubs or their appraisal results as a PDF.
-Entities:
+To utilize the system's functionalities, users will have to initially register an organization in the web application and create departments. Following the latter, the superuser (the user who created the organization) can invite other users (i.e., employees) to join newly created departments. Certain departments, as well as users with the appropriate access level,
+can create projects, set payroll details, and enter performance appraisal results into the system via forms in the web application. Additionally, the employees can also download their pay stubs or their appraisal results as a PDF.
+
+**Entities:**
 To provide and support the functionalities discussed above, the employee
 management system will be composed of the following entities:
-● Organisation: (Strong)
-○ Creating an organisation entity is the entry point to our system. It will contain
+1. Organisation: (Strong)
+- Creating an organisation entity is the entry point to our system. It will contain
 basic details about the organisation, such as the business registration and
 payment cycle information. The attributes of this entity, such as the
 payroll/payment cycle date, are important for the payroll management
 functionalities as they determine when and how much each employee will
 be paid.
-Databases Application 4
-Databases Application 3 
-● Employee (Weak)
-○ This entity contains information about each employee of an organisation,
+2. Employee (Weak)
+- This entity contains information about each employee of an organisation,
 including the bank and wage details. This information will be available for
 the employee themselves to be accessed when necessary.
-● Bank: (Weak)
-○ This entity contains the bank details (e.g., branch number, account number, and
+3. Bank: (Weak)
+- This entity contains the bank details (e.g., branch number, account number, and
 bank name) of each employee. Although this entity is not accessed by any
 other entity, its information is used in the computation and entry of records
 into the payroll entity.
-● Payroll: (Weak)
-○ This entity consists of details such as the hours worked by an employee, their
+4. Payroll: (Weak)
+- This entity consists of details such as the hours worked by an employee, their
 gross pay, and any applicable deductions required for calculating their net
 pay and generating the pay stub. The latter is made possible by this entity's
 relationship with the employee and organisation entity.
-● Project_Performance: (Weak)
-○ Whenever an employee in the organisation has their performance evaluated,
+5. Project_Performance: (Weak)
+- Whenever an employee in the organisation has their performance evaluated,
 the results are stored in this entity. This entity is dependent on information
 from the employee and project entity. Users can access information from
 this entity by viewing their performance results/evaluation.
-● Project: (Weak)
-○ This entity contains unique information about each product/project that is
+6. Project: (Weak)
+- This entity contains unique information about each product/project that is
 being undertaken by the organisation and its employees. Additionally,
 the evaluation of employees' performance is done using key performance
 indicators (“KPIs”) relative to the product/projects category. It aids in
 managing expectations from which employee appraisals will be entered
 into the performance table according to each project or product ID.
-● Department: (Weak)
-○ This entity contains information regarding the different departments within the
-organisation, the number of employees per department, as well the
+7. Department: (Weak)
+- This entity contains information regarding the different departments within the
+organization, the number of employees per department, as well the
 description, budget, and access scope of each department. Employees'
 access levels are based on the department entity they are associated with.
-● Addressbook: (Weak)
-○ This entity contains information about the employee, and organizatin
+8. Addressbook: (Weak)
+- This entity contains information about the employee, and organizatin
 address details. This includes various attributes such as their street, city,
 province, etc.
-● Appraisal: (Weak)
-○ This entity contains information about the appraised project. The attributes
+9. Appraisal: (Weak)
+- This entity contains information about the appraised project. The attributes
 include, the organization, project, the appraiser and the employee who is
 appraised.
 
-Relationships:
+**Relationships:**
 1. Employee → Department
 a. A department can manage multiple employees.
 b. One employee will be managed by one department (1:N relationship)
