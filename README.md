@@ -19,7 +19,7 @@ project/product.
 organisation. This assumption is valid as it reflects general accounting
 principles.
 ● ● Each employee will have a fixed wage.
-User Experience / User Interface:
+## User Experience / User Interface:
 To utilise the functionalities of the system, users will have to initially register an organisation
 in the web application and create departments. Following the latter, the superuser (the user
 who created the organisation) can then invite other users (i.e., employees) to join newly
