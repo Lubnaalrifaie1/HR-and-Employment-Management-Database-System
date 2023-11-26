@@ -13,7 +13,7 @@ This project revolves around designing and implementing an employee management s
 To utilize the system's functionalities, users will have to initially register an organization in the web application and create departments. Following the latter, the superuser (the user who created the organization) can invite other users (i.e., employees) to join newly created departments. Certain departments, as well as users with the appropriate access level,
 can create projects, set payroll details, and enter performance appraisal results into the system via forms in the web application. Additionally, the employees can also download their pay stubs or their appraisal results as a PDF.
 
-**Entities:**
+# **Entities:**
 To provide and support the functionalities discussed above, the employee
 management system will be composed of the following entities:
 1. Organisation: (Strong)
