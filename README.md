@@ -1,28 +1,18 @@
 # Human-Resources-and-Employment-Management-Database-System
-Conceptualized, designed, and executed a cutting-edge web-based Employee Management System with a focus on two integral components: Employee Payroll Management and Employee Performance Management.
+Conceptualized, designed, and executed a cutting-edge web-based employee management system with a focus on two integral components: employee payroll management and employee performance management.
 
 ## Introduction / System Overview:
-This project revolves around the design and implementation of an employee management
-system web application that is composed of two sub-components: employee payroll
-management and employee performance management. These sub-components and the system
-as whole assist organisations and companies in the processes of evaluating and tracking
-employee performance relative to a particular product or project and performing
-payroll-related activities (i.e., calculation of gross wages, deductions, net pay, and generating
-the pay stub).
-To accommodate the time constraint imposed on this project, certain assumptions
-regarding the scope of the system's functionalities were made:
-● The performance of each employee is evaluated per
-project/product.
-○ KPIs will be based on the project/product type.
-● Each employee will be paid bi-monthly.
-○ The payment cycle date is fixed and common for all employees in the
-organisation. This assumption is valid as it reflects general accounting
-principles.
-● ● Each employee will have a fixed wage.
+This project revolves around designing and implementing an employee management system web application composed of two sub-components: employee payroll management and employee performance management. These sub-components and the system as whole assist organizations and companies in the processes of evaluating and tracking employee performance relative to a particular product or project and performing payroll-related activities (i.e., calculation of gross wages, deductions, net pay, and generating the pay stub). 
+**To accommodate the time constraint imposed on this project, certain assumptions regarding the scope of the system's functionalities were made:**
+- The performance of each employee is evaluated per project/product.
+- KPIs will be based on the project/product type.
+- Each employee will be paid bi-monthly.
+- The payment cycle date is fixed and common for all employees in the organization. This assumption is valid as it reflects general accounting principles.
+- Each employee will have a fixed wage.
 ## User Experience / User Interface:
-To utilise the functionalities of the system, users will have to initially register an organisation
+To utilize the system's functionalities, users will have to initially register an organization
 in the web application and create departments. Following the latter, the superuser (the user
-who created the organisation) can then invite other users (i.e., employees) to join newly
+who created the organization) can invite other users (i.e., employees) to join newly
 created departments. Certain departments, as well as users with the appropriate access level,
 can create projects, set payroll details, and enter performance appraisal results into the system
 via forms in the web application. Additionally, the employees can also download their pay
@@ -38,8 +28,7 @@ payroll/payment cycle date, are important for the payroll management
 functionalities as they determine when and how much each employee will
 be paid.
 Databases Application 4
-CP363 - Group 38
-Databases Application 3 CP363 - Group 38
+Databases Application 3 
 ● Employee (Weak)
 ○ This entity contains information about each employee of an organisation,
 including the bank and wage details. This information will be available for
@@ -79,8 +68,7 @@ province, etc.
 ○ This entity contains information about the appraised project. The attributes
 include, the organization, project, the appraiser and the employee who is
 appraised.
-Databases Application 5
-CP363 - Group 38
+
 Relationships:
 1. Employee → Department
 a. A department can manage multiple employees.
